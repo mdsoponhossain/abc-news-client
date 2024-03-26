@@ -1,0 +1,22 @@
+.mobiles-menu>section,
+.feature-menu ul {
+    display: none;
+}
+
+.mobiles-menu,
+.feature-menu {
+    position: relative;
+}
+
+.feature-menu:hover>ul {
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    padding: 5px;
+}
+
+.mobiles-menu:hover>.mobile-mega-menu{
+    display: flex;
+    position: absolute;
+}
