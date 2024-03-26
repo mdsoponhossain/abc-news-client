@@ -12,8 +12,9 @@
     display: block;
     position: absolute;
     background-color: white;
-    width: 150px;
-    padding: 5px;
+    width: 250px;
+    padding-left: 30px;
+    border-radius: 10px;
 }
 
 .mobiles-menu:hover>.mobile-mega-menu{
