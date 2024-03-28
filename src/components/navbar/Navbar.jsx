@@ -27,16 +27,16 @@ const Navbar = () => {
                             </li>
                             <li className='mobiles-menu  hover:cursor-pointer ml-7'><span className='hover:text-red-600 flex items-center gap-2'>MOBILES <span><IoIosArrowDown></IoIosArrowDown></span></span>
 
-                                <div className='border border-1 hidden bg-white  lg:w-[900px] md:w-[500px] mobile-mega-menu '>
-                                    <div className='w-[300px] p-5'>
+                                <div className='border border-1 hidden bg-white  lg:w-[600px] md:w-[400px]  md:right-1 lg:left-0 mobile-mega-menu '>
+                                    <div className='lg:w-[300px] md:w-[250px] md:p-2 lg:p-5'>
                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIPGTM92ndJmcQr-6GyIikyG8lGY27KNhLFA&usqp=CAU" alt="" />
                                         <p className='text-justify'>To understand the new smart watched and other pro </p>
                                     </div>
-                                    <div className='w-[300px] p-5'>
+                                    <div className='lg:w-[300px] md:w-[250px] md:p-2 lg:p-5'>
                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIPGTM92ndJmcQr-6GyIikyG8lGY27KNhLFA&usqp=CAU" alt="" />
                                         <p className='text-justify'>To understand the new smart watched and other pro </p>
                                     </div>
-                                    <div className='w-[300px] p-5'>
+                                    <div className='lg:w-[300px] md:w-[250px] md:p-2 lg:p-5'>
                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIPGTM92ndJmcQr-6GyIikyG8lGY27KNhLFA&usqp=CAU" alt="" />
                                         <p className='text-justify'>To understand the new smart watched and other pro </p>
                                     </div>
