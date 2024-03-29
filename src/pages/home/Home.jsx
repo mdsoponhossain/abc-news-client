@@ -1,4 +1,6 @@
 import Banner from "../../components/banner/Banner";
+import FooterSection from "../../components/footerSection/FooterSection";
+import Gadgets from "../../components/gadgets/Gadgets";
 import Navbar from "../../components/navbar/Navbar";
 import News from "../../components/news/News";
 import Trending from "../../components/trending/Trending";
@@ -11,6 +13,13 @@ const Home = () => {
             <Trending></Trending>
             <div className="border border-1 border-red-500 p-3 md:p-2 lg:p-0 lg:w-[1200px] mx-auto">
                 <News></News>
+            </div>
+            <Gadgets></Gadgets>
+            <div className="border border-1 border-red-500 p-3 md:p-2 lg:p-0 lg:w-[1200px] mx-auto">
+                <News></News>
+            </div>
+            <div>
+                <FooterSection></FooterSection>
             </div>
         </div>
     );
