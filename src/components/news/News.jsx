@@ -1,87 +1,62 @@
+import { useEffect, useState } from "react";
+import MainContent from "../../sharedComponents/mainContent/MainContent";
 
 const News = () => {
+
+    const [contents, setContents] = useState([]);
+    useEffect(() => {
+        fetch('./news/news.json')
+            .then(res => res.json())
+            .then(contents => setContents(contents))
+    }, []);
+    console.log(contents)
+
+
+
+
     return (
-        <div className="my-16">
-            <h1 className="text-2xl font-semibold my-3 text-red-600">TODAY'S NEWS</h1>
-            <section className="lg:flex gap-4">
-                <div className="lg:w-2/3 ">
+        <section className="border border-1 border-red-500 p-3 md:p-2 lg:p-0 lg:w-[1200px] mx-auto">
+            <div className="my-16">
+                <h1 className="text-2xl font-semibold my-3 text-red-600">TODAY'S NEWS</h1>
+                <section className="lg:flex gap-4">
+                    <div className="lg:w-2/3 ">
 
 
-                    {/* item one */}
-                    <div className=" lg:flex  lg:gap-3 items-center my-3">
-                        <div className="lg:w-[40%]">
-                            <img src="https://smartmag.theme-sphere.com/tech-2/wp-content/uploads/sites/8/2021/01/Depositphotos_244641208_xl-2015-1024x631.jpg" alt="" />
-                        </div>
-                        <div className=" lg:w-[60%] border border-1 border-red-600">
-                            <p className="md:text-2xl w-full font-semibold">Lenovo Unveils IdeaPad Laptops, 5G Internet & a Snapdragon 8cx Chipset</p>
-                            <div className="flex gap-2 items-center text-xs mb-5 md:text-sm">
-                                <p>By Shane Doe</p>
-                                <p> --- 28 March 24</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr></hr>
-                    {/* item one */}
-                    <div className=" lg:flex  lg:gap-3  gap-10 items-center my-3">
-                        <div className="lg:w-[40%]">
-                            <img src="https://smartmag.theme-sphere.com/tech-2/wp-content/uploads/sites/8/2021/01/Depositphotos_244641208_xl-2015-1024x631.jpg" alt="" />
-                        </div>
-                        <div className=" lg:w-[60%] border border-1 border-red-600">
-                            <p className="md:text-2xl w-full font-semibold">Lenovo Unveils IdeaPad Laptops, 5G Internet & a Snapdragon 8cx Chipset</p>
-                            <div className="flex gap-2 items-center text-xs mb-5 md:text-sm">
-                                <p>By Shane Doe</p>
-                                <p> --- 28 March 24</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr></hr>
-                    {/* item one */}
-                    <div className=" lg:flex  lg:gap-3  gap-10 items-center my-3">
-                        <div className="lg:w-[40%]">
-                            <img src="https://smartmag.theme-sphere.com/tech-2/wp-content/uploads/sites/8/2021/01/Depositphotos_244641208_xl-2015-1024x631.jpg" alt="" />
-                        </div>
-                        <div className=" lg:w-[60%] border border-1 border-red-600">
-                            <p className="md:text-2xl w-full font-semibold">Lenovo Unveils IdeaPad Laptops, 5G Internet & a Snapdragon 8cx Chipset</p>
-                            <div className="flex gap-2 items-center text-xs mb-5 md:text-sm">
-                                <p>By Shane Doe</p>
-                                <p> --- 28 March 24</p>
-                            </div>
-                        </div>
+
+                        {
+                            contents?.map((content, index) => <MainContent
+                                key={index} content={content}
+                                imgStyles={'lg:w-[40%]'}
+                                containerStyles={'lg:flex  lg:gap-3 items-center my-3'}
+                                titleStyles={"md:text-2xl w-full font-semibold"}
+                                editorStyles={"flex gap-2 items-center text-xs mb-5 md:text-sm"}
+                                textContainerStlyes={" lg:w-[60%] border border-1 border-red-600"}
+                            ></MainContent>)
+                        }
+
                     </div>
 
-                    <hr></hr>
 
-                </div>
-
-
-                {/* sidebar */}
+                    {/* sidebar */}
 
 
-                <div className="lg:w-1/3 ">
-                    <p>EDITOR'S PICKS</p>
-                    <section>
-                        <div className="mb-10">
-                            <img src="https://smartmag.theme-sphere.com/tech-2/wp-content/uploads/sites/8/2021/01/Depositphotos_425000148_xl-2015-1024x672.jpg" alt="" />
-                            <p className="md:text-xl w-full font-semibold">5 Things the Canon EOS R1 Needs to Compete With the Sony A1</p>
-                        </div>
+                    <div className="lg:w-1/3 ">
+                        <p>EDITOR'S PICKS</p>
+                        {
+                            contents?.map((content, index) => <MainContent
+                                key={index} content={content}
+                                imgStyles={'lg:w-[100%]'}
+                                containerStyles={"mb-10"}
+                                titleStyles={"md:text-xl w-full font-semibold"}
+                                editorStyles={"flex gap-2 items-center text-xs mb-5 md:text-sm"}
+                                textContainerStlyes={"md:text-xl w-full font-semibold"}
+                            ></MainContent>)
+                        }
 
-
-                        <div className="mb-10">
-                            <img src="https://smartmag.theme-sphere.com/tech-2/wp-content/uploads/sites/8/2021/01/Depositphotos_425000148_xl-2015-1024x672.jpg" alt="" />
-                            <p className="md:text-xl w-full font-semibold">5 Things the Canon EOS R1 Needs to Compete With the Sony A1</p>
-                        </div>
-
-
-
-
-
-
-                    </section>
-
-
-                </div>
-            </section>
-        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
     );
 };
 

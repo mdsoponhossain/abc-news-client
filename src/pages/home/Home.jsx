@@ -11,16 +11,16 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <Trending></Trending>
-            <div className="border border-1 border-red-500 p-3 md:p-2 lg:p-0 lg:w-[1200px] mx-auto">
-                <News></News>
-            </div>
+
+            <News></News>
+
             <Gadgets></Gadgets>
-            <div className="border border-1 border-red-500 p-3 md:p-2 lg:p-0 lg:w-[1200px] mx-auto">
-                <News></News>
-            </div>
-            <div>
-                <FooterSection></FooterSection>
-            </div>
+
+            <News></News>
+
+
+            <FooterSection></FooterSection>
+
         </div>
     );
 };
