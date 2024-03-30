@@ -8,7 +8,7 @@ const Banner = () => {
             .then(res => res.json())
             .then(data => setBannerData(data))
     }, []);
-    console.log(bannerData)
+    // console.log(bannerData)
 
 
     return (

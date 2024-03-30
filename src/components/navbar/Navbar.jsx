@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 shadow-sm md:shadow-md sticky top-0 z-50 " style={{}}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
