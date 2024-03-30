@@ -16,7 +16,7 @@ const Gadgets = () => {
         <section className="bg-gray-100">
             <div className="border border-1 border-red-500 p-3 md:p-2 lg:p-0 lg:w-[1200px] mx-auto">
                 <h1 className="text-2xl font-semibold my-3 text-red-600">GADGETS</h1>
-                <section className="md:flex md:justify-between">
+                <section className="md:flex md:justify-between grid md:grid-cols-2 lg:grid-cols-3 gap-2 h-fit">
                     {
                         trendings?.map((content, index) => <MainContent
                             key={index} content={content}

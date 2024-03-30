@@ -17,7 +17,7 @@ const Trending = () => {
                     trendings?.map((content, index) => <MainContent
                         key={index} content={content}
                         imgStyles={"h-[200px] w-full lg:w-[380px]"}
-                        titleStyles={"font-bold text-xl mt-10 lg:mt-16"}
+                        titleStyles={"md:font-bold md:text-xl mt-10 lg:mt-16 mt-16 md:mt-0"}
                         containerStyles={'my-5 md:my-0'}
                     ></MainContent>)
                 }
