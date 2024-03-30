@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
-const MainContent = ({ content,imgStyles, containerStyles, titleStyles, editorStyles, textContainerStlyes }) => {
-    
+const MainContent = ({ content, imgStyles, containerStyles, titleStyles, editorStyles, textContainerStlyes }) => {
+
     return (
-        <div>
+        <Link to={`/details/${content?.id}`}>
             {/* item one */}
             <div className={containerStyles}>
                 <div className={imgStyles}>
@@ -16,7 +17,7 @@ const MainContent = ({ content,imgStyles, containerStyles, titleStyles, editorSt
                 </div>
             </div>
             <hr></hr>
-        </div>
+        </Link>
     );
 };
 

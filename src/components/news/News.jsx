@@ -9,7 +9,7 @@ const News = () => {
             .then(res => res.json())
             .then(contents => setContents(contents))
     }, []);
-    console.log(contents)
+    // console.log(contents)
 
 
 

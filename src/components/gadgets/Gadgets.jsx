@@ -9,7 +9,7 @@ const Gadgets = () => {
             .then(res => res.json())
             .then(data => setTrendings(data))
     }, []);
-    console.log(trendings)
+    // console.log(trendings)
 
 
     return (
